@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project: Library (The Oding Project)</title>
+    <title>Odin Project: Library</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+    </style>
 </head>
 <body>
-    
+<!-- Header Section -->
+    <header>
+        <h1 class="header-title">my library</h1>
+        <p>reading daily feeds the mind</p>
+        <button id="new-book-btn">add new book</button>
+    </header>
+<!-- Main Section -->
+    <main>
+        <div id="book-container"></div>
+    </main>
+<!-- Book Dialog -->
+    <dialog id="new-book-dialog">
+        <form id="new-book-form">
+            <h2>Add a New Book</h2>
+            
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pages">Pages:</label>
+                <input type="number" id="pages" name="pages" required min="1">
+            </div>
+            
+            <div class="form-group-checkbox">
+                <label for="read">Have you read it?</label>
+                <input type="checkbox" id="read" name="read">
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit">Add Book</button>
+                <button type="button" id="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <!-- Dialong End -->
 </body>
 </html>
